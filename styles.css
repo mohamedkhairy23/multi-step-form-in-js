@@ -1,22 +1,25 @@
 .card {
   background-color: white;
-  border: 1px solid #333;
+  border: 1px solid #e9ecef;
   border-radius: 0.5rem;
   padding: 0.5rem;
   max-width: 300px;
   margin: 0 auto;
   animation: fade 250ms ease-in-out forwards;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 select {
-  font-size: 0.9rem;
-  padding: 2px 5px;
+  font-size: 1rem;
+  max-width: 100%;
+
+  padding: 0.25em;
 }
 
 textarea {
   font-size: 0.8rem;
   letter-spacing: 1px;
-  padding: 10px;
+  padding: 0.25em;
   max-width: 100%;
   line-height: 1.5;
   border-radius: 5px;
@@ -44,6 +47,8 @@ textarea {
 .form-group > input {
   border: 1px solid #333;
   border-radius: 0.25em;
+  max-width: 100%;
+
   font-size: 1rem;
   padding: 0.25em;
 }
