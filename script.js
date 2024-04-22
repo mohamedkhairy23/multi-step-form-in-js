@@ -83,47 +83,150 @@ function showCurrentStep() {
 
 lastNext.addEventListener("click", (e) => {
   e.preventDefault();
-  // let email = document.getElementById("email");
-  // let password = document.getElementById("password");
-  // let address = document.getElementById("address");
-  // let city = document.getElementById("city");
-  // let zipcode = document.getElementById("zipcode");
-  // let firstName = document.getElementById("firstName");
-  // let lastName = document.getElementById("lastName");
+  let modelTypeSelect = document.getElementById("model-type-select");
+  let carVendorSelect = document.getElementById("car-vendor-select");
+  let carModelSelect = document.getElementById("car-model-select");
+  let carYearSelect = document.getElementById("car-year-select");
+  let nameOfPiece = document.getElementById("name-of-piece");
+  let numOfPieces = document.getElementById("num-of-pieces");
+  let serialNumOfPiece = document.getElementById("serial-number-of-piece");
+  let pieceDescription = document.getElementById("piece-description");
+  let pieceImage = document.getElementById("piece-image");
+  let clientFullName = document.getElementById("client-full-name");
+  let clientEmail = document.getElementById("client-email");
+  let clientPhoneNumber = document.getElementById("phone");
+  let typeOfCharging = document.getElementById("type-of-charging");
+  let fullNameInArabic = document.getElementById("full-name-in-arabic");
+  let fullNameInEnglish = document.getElementById("full-name-in-english");
+  let selectCountry = document.getElementById("select-country");
+  let cityName = document.getElementById("city-name");
+  let streetName = document.getElementById("street-name");
+  let zipCode = document.getElementById("zip-code");
+  let addressDescription = document.getElementById("address-description");
+  let phoneForCharging = document.getElementById("phone-for-charging");
 
-  // var result = document.createElement("div");
-  // var content = "";
-  // content +=
-  //   `<p>Email is ` +
-  //   email.value +
-  //   `</p><p>Address is ` +
-  //   address.value +
-  //   `</p><p>City is ` +
-  //   city.value +
-  //   `</p><p>ZipCode is ` +
-  //   zipcode.value +
-  //   `</p><p>First Name is ` +
-  //   firstName.value +
-  //   `</p><p>Last Name is ` +
-  //   lastName.value +
-  //   `</p>`;
-  // result.innerHTML = content;
-  // document.getElementById("last-card").appendChild(result);
+  var result = document.createElement("div");
+  var content = "";
+  content +=
+    `<p>Model type select is ` +
+    modelTypeSelect.value +
+    `</p><hr /><p>Car vendor select is ` +
+    carVendorSelect.value +
+    `</p><hr /><p>Car year select is ` +
+    carYearSelect.value +
+    `</p><hr /><p>Car model select is ` +
+    carModelSelect.value +
+    `</p><hr /><p>Name of piece is ` +
+    nameOfPiece.value +
+    `</p><hr /><p>Number of pieces is ` +
+    numOfPieces.value +
+    `</p><hr /><p>Serial num of piece is ` +
+    serialNumOfPiece.value +
+    `</p><hr /><p>Piece description is ` +
+    pieceDescription.value +
+    `</p><hr /><p>Client full name is ` +
+    clientFullName.value +
+    `</p><hr /><p>Client email is ` +
+    clientEmail.value +
+    `</p><hr /><p>Client phone number is ` +
+    clientPhoneNumber.value +
+    `</p><hr /><p>Type of charging is ` +
+    typeOfCharging.value +
+    `</p><hr /><p>Full name in Arabic is ` +
+    fullNameInArabic.value +
+    `</p><hr /><p>Full name in English is ` +
+    fullNameInEnglish.value +
+    `</p><hr /><p>Selected country is ` +
+    selectCountry.value +
+    `</p><hr /><p>City name is ` +
+    cityName.value +
+    `</p><hr /><p>Street name is ` +
+    streetName.value +
+    `</p><hr /><p>Zip code is ` +
+    zipCode.value +
+    `</p><hr /><p>Address description is ` +
+    addressDescription.value +
+    `</p><hr /><p>Phone for charging is ` +
+    phoneForCharging.value +
+    `</p>`;
+  result.innerHTML = content;
+  document.getElementById("last-card").appendChild(result);
 });
 
 multiStepForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  // let email = document.getElementById("email");
-  // let password = document.getElementById("password");
-  // let address = document.getElementById("address");
-  // let city = document.getElementById("city");
-  // let zipcode = document.getElementById("zipcode");
-  // let firstName = document.getElementById("firstName");
-  // let lastName = document.getElementById("lastName");
-  // alert("successfully");
+  let modelTypeSelect = document.getElementById("model-type-select");
+  let carVendorSelect = document.getElementById("car-vendor-select");
+  let carModelSelect = document.getElementById("car-model-select");
+  let carYearSelect = document.getElementById("car-year-select");
+  let nameOfPiece = document.getElementById("name-of-piece");
+  let numOfPieces = document.getElementById("num-of-pieces");
+  let serialNumOfPiece = document.getElementById("serial-number-of-piece");
+  let pieceDescription = document.getElementById("piece-description");
+  let pieceImage = document.getElementById("piece-image");
+  let clientFullName = document.getElementById("client-full-name");
+  let clientEmail = document.getElementById("client-email");
+  let clientPhoneNumber = document.getElementById("phone");
+  let typeOfCharging = document.getElementById("type-of-charging");
+  let fullNameInArabic = document.getElementById("full-name-in-arabic");
+  let fullNameInEnglish = document.getElementById("full-name-in-english");
+  let selectCountry = document.getElementById("select-country");
+  let cityName = document.getElementById("city-name");
+  let streetName = document.getElementById("street-name");
+  let zipCode = document.getElementById("zip-code");
+  let addressDescription = document.getElementById("address-description");
+  let phoneForCharging = document.getElementById("phone-for-charging");
+
+  alert("successfully");
   // window.location.reload();
   // formSteps.findIndex((step) => {
-  //   return step.classList.contains("active");
+  //   return step.classList.remove("active");
   // });
-  // console.log(email.value, city.value);
+
+  var result = document.createElement("div");
+  var content = "<p>Successfully</p>";
+  content +=
+    `<p>Model type select is ` +
+    modelTypeSelect.value +
+    `</p><hr /><p>Car vendor select is ` +
+    carVendorSelect.value +
+    `</p><hr /><p>Car year select is ` +
+    carYearSelect.value +
+    `</p><hr /><p>Car model select is ` +
+    carModelSelect.value +
+    `</p><hr /><p>Name of piece is ` +
+    nameOfPiece.value +
+    `</p><hr /><p>Number of pieces is ` +
+    numOfPieces.value +
+    `</p><hr /><p>Serial num of piece is ` +
+    serialNumOfPiece.value +
+    `</p><hr /><p>Piece description is ` +
+    pieceDescription.value +
+    `</p><hr /><p>Client full name is ` +
+    clientFullName.value +
+    `</p><hr /><p>Client email is ` +
+    clientEmail.value +
+    `</p><hr /><p>Client phone number is ` +
+    clientPhoneNumber.value +
+    `</p><hr /><p>Type of charging is ` +
+    typeOfCharging.value +
+    `</p><hr /><p>Full name in Arabic is ` +
+    fullNameInArabic.value +
+    `</p><hr /><p>Full name in English is ` +
+    fullNameInEnglish.value +
+    `</p><hr /><p>Selected country is ` +
+    selectCountry.value +
+    `</p><hr /><p>City name is ` +
+    cityName.value +
+    `</p><hr /><p>Street name is ` +
+    streetName.value +
+    `</p><hr /><p>Zip code is ` +
+    zipCode.value +
+    `</p><hr /><p>Address description is ` +
+    addressDescription.value +
+    `</p><hr /><p>Phone for charging is ` +
+    phoneForCharging.value +
+    `</p>`;
+  result.innerHTML = content;
+  document.getElementById("container")[1].appendChild(result);
 });

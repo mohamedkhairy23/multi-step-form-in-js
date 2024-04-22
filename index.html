@@ -12,7 +12,7 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="container main-content">
+    <div class="container">
       <form data-multi-step>
         <div class="card" data-step>
           <h3 class="step-title">This is step 1</h3>
@@ -26,7 +26,7 @@
           </div>
           <div class="form-group">
             <label for="car-vendor-select">Choose a car vendor</label>
-            <select required id="car-vendor-selec" name="car-vendor-select">
+            <select required id="car-vendor-select" name="car-vendor-select">
               <option value="">Select a car vendor:</option>
               <option value="audi">Audi</option>
               <option value="bmw">BMW</option>
@@ -59,7 +59,7 @@
             </select>
           </div>
           <div class="form-group">
-            <label for="car-year-select">Choose a car ear</label>
+            <label for="car-year-select">Choose a car year</label>
             <select required id="car-year-select" name="car-year-select">
               <option value="">Select a car year:</option>
               <option value="2016">2015</option>
@@ -134,7 +134,12 @@
           <h3 class="step-title">This is step 3</h3>
           <div class="form-group">
             <label for="client-full-name">Client full name</label>
-            <input type="text" required name="full-name" id="full-name" />
+            <input
+              type="text"
+              required
+              name="client-full-name"
+              id="client-full-name"
+            />
           </div>
           <div class="form-group">
             <label for="client-email">Client email</label>
@@ -151,13 +156,20 @@
           </div>
           <div class="form-group">
             <label for="password">Password</label>
-            <input required type="password" name="password" id="password" />
+            <input
+              required
+              minlength="6"
+              type="password"
+              name="password"
+              id="password"
+            />
           </div>
           <div class="form-group">
             <label for="confirm-password">Confirm Password</label>
             <input
               required
               type="password"
+              minlength="6"
               name="confirm-password"
               id="confirm-password"
             />
@@ -187,6 +199,8 @@
             <input
               type="text"
               required
+              minlength="3"
+              maxlength="30"
               name="full-name-in-arabic"
               id="full-name-in-arabic"
             />
@@ -196,6 +210,8 @@
             <input
               type="text"
               required
+              minlength="3"
+              maxlength="30"
               name="full-name-in-english"
               id="full-name-in-english"
             />
@@ -504,16 +520,21 @@
             <label for="address-description">Address description</label>
             <textarea
               required
-              id="piece-description"
-              name="piece-description"
+              id="address-description"
+              name="address-description"
               rows="5"
               cols="33"
             >
             </textarea>
           </div>
           <div class="form-group">
-            <label for="phone">Phone number for charging</label>
-            <input type="tel" required name="phone" id="phone" />
+            <label for="phone-for-charging">Phone number for charging</label>
+            <input
+              type="tel"
+              required
+              name="phone-for-charging"
+              id="phone-for-charging"
+            />
           </div>
 
           <button type="button" data-previous>Previous</button>
@@ -531,7 +552,9 @@
     <script src="./build/js/intlTelInput.js"></script>
     <script>
       var input = document.querySelector("#phone");
+      var input_two = document.querySelector("#phone-for-charging");
       window.intlTelInput(input, {});
+      window.intlTelInput(input_two, {});
     </script>
   </body>
 </html>
