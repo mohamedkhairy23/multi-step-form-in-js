@@ -12,8 +12,8 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="container">
-      <form data-multi-step>
+    <div id="container" class="container">
+      <form id="data-multi-step" data-multi-step>
         <div class="card" data-step>
           <h3 class="step-title">This is step 1</h3>
           <div class="form-group">
@@ -84,6 +84,8 @@
             <input
               required
               type="text"
+              minlength="3"
+              maxlength="30"
               name="name-of-piece"
               id="name-of-piece"
             />

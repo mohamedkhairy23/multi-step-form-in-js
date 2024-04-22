@@ -121,9 +121,9 @@ lastNext.addEventListener("click", (e) => {
     `</p><hr /><p>Number of pieces is ` +
     numOfPieces.value +
     `</p><hr /><p>Serial num of piece is ` +
-    serialNumOfPiece.value +
+    serialNumOfPiece?.value +
     `</p><hr /><p>Piece description is ` +
-    pieceDescription.value +
+    pieceDescription?.value +
     `</p><hr /><p>Client full name is ` +
     clientFullName.value +
     `</p><hr /><p>Client email is ` +
@@ -177,15 +177,12 @@ multiStepForm.addEventListener("submit", (e) => {
   let addressDescription = document.getElementById("address-description");
   let phoneForCharging = document.getElementById("phone-for-charging");
 
-  alert("successfully");
-  // window.location.reload();
-  // formSteps.findIndex((step) => {
-  //   return step.classList.remove("active");
-  // });
+  multiStepForm.style.display = "none";
 
-  var result = document.createElement("div");
-  var content = "<p>Successfully</p>";
-  content +=
+  var result1 = document.createElement("div");
+  var content1 =
+    "<h1 style='color:green'>Order has been sent successfully</h1>";
+  content1 +=
     `<p>Model type select is ` +
     modelTypeSelect.value +
     `</p><hr /><p>Car vendor select is ` +
@@ -199,9 +196,9 @@ multiStepForm.addEventListener("submit", (e) => {
     `</p><hr /><p>Number of pieces is ` +
     numOfPieces.value +
     `</p><hr /><p>Serial num of piece is ` +
-    serialNumOfPiece.value +
+    serialNumOfPiece?.value +
     `</p><hr /><p>Piece description is ` +
-    pieceDescription.value +
+    pieceDescription?.value +
     `</p><hr /><p>Client full name is ` +
     clientFullName.value +
     `</p><hr /><p>Client email is ` +
@@ -226,7 +223,8 @@ multiStepForm.addEventListener("submit", (e) => {
     addressDescription.value +
     `</p><hr /><p>Phone for charging is ` +
     phoneForCharging.value +
-    `</p>`;
-  result.innerHTML = content;
-  document.getElementById("container")[1].appendChild(result);
+    `</p><button  onclick='window.location.reload()'>reset</button>`;
+  result1.innerHTML = content1;
+  document.getElementById("container")?.appendChild(result1);
+  globalThis.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 });
